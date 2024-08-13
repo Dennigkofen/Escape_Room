@@ -28,3 +28,8 @@ function checkCode(inputId, riddleId, codeKey) {
         inputField.focus(); // Fokussiert das Eingabefeld, wenn die Antwort falsch ist
     }
 }
+
+// Timer-Funktionalität
+let timerStart = Date.now();
+const timerElement = document.getElementById('timer');
+
