@@ -15,12 +15,16 @@ const codes = {
 function checkCode(inputId, riddleId, codeKey) {
     const userInput = document.getElementById(inputId).value;
     const riddleDiv = document.getElementById(riddleId);
+    const inputField = document.getElementById(inputId);
 
     if (userInput === codes[codeKey]) {
         riddleDiv.classList.add('solved');
-        riddleDiv.querySelector('button').disabled = true;  // Optionale Deaktivierung des Buttons
+        riddleDiv.classList.remove('incorrect'); // Entfernt das Rot bei korrekten Antworten
+        riddleDiv.querySelector('button').disabled = true;  // Optional: Deaktivierung des Buttons
         riddleDiv.querySelector('label').textContent += " - Rätsel gelöst";
     } else {
-        riddleDiv.classList.remove('solved');  // Falls man die Farbe zurücksetzen möchte
+        riddleDiv.classList.add('incorrect');
+        riddleDiv.classList.remove('solved'); // Entfernt das Grün bei falschen Antworten
+        inputField.focus(); // Fokussiert das Eingabefeld, wenn die Antwort falsch ist
     }
 }
