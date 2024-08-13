@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 800px;
+}
+
+.riddle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.riddle input {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+.riddle button {
+    padding: 5px;
+}
+
+.solved {
+    background-color: lightgreen;
+}
