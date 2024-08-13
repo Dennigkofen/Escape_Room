@@ -16,7 +16,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    max-width: 800px;
+    max-width: 1200px;
 }
 
 .riddle {
@@ -26,7 +26,7 @@ h1 {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 150px;
+    width: 180px; /* Erhöht, um mehr Platz zu bieten */
 }
 
 .riddle input {
