@@ -1,5 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* Heller Hintergrund für bessere Lesbarkeit */
+    color: #333; /* Dunkle Schriftfarbe für besseren Kontrast */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +11,10 @@ body {
 }
 
 h1 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .container {
@@ -17,28 +22,73 @@ h1 {
     flex-wrap: wrap;
     gap: 20px;
     max-width: 1200px;
+    justify-content: center; /* Zentriert die Rätselblöcke */
 }
 
 .riddle {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 180px; /* Erhöht, um mehr Platz zu bieten */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 200px; /* Breitere Blöcke für bessere Lesbarkeit */
+    transition: background 0.3s, box-shadow 0.3s; /* Übergänge für Animationseffekte */
+}
+
+.riddle:hover {
+    background: #f9f9f9;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.riddle label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
 }
 
 .riddle input {
-    margin-bottom: 10px;
-    padding: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     width: 100%;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.riddle input:focus {
+    border-color: #007bff; /* Blauer Rand bei Fokussierung */
+    outline: none;
 }
 
 .riddle button {
-    padding: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blaues Hintergrund */
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.solved {
-    background-color: lightgreen;
+.riddle button:hover {
+    background-color: #0056b3; /* Dunkleres Blau beim Hover */
+}
+
+.riddle.solved {
+    background-color: #e0ffe0; /* Hellgrüner Hintergrund für gelöste Rätsel */
+    border-color: #b3d9b3;
+}
+
+.riddle.solved label {
+    color: #333;
+}
+
+.riddle.solved button {
+    background-color: #28a745; /* Grüner Hintergrund für gelöste Rätsel */
+    cursor: default; /* Mauszeiger zeigt keine Interaktivität an */
 }
