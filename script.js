@@ -33,3 +33,25 @@ function checkCode(inputId, riddleId, codeKey) {
 let timerStart = Date.now();
 const timerElement = document.getElementById('timer');
 
+function updateTimer() {
+    const now = Date.now();
+    const elapsed = now - timerStart;
+
+    // Zeit in Stunden, Minuten und Sekunden umrechnen
+    const hours = Math.floor(elapsed / (1000 * 60 * 60));
+    const minutes = Math.floor((elapsed % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((elapsed % (1000 * 60)) / 1000);
+
+    // Zeit formatieren (HH:MM:SS)
+    const formattedTime = [
+        hours.toString().padStart(2, '0'),
+        minutes.toString().padStart(2, '0'),
+        seconds.toString().padStart(2, '0')
+    ].join(':');
+
+    // Timer anzeigen
+    timerElement.textContent = `Zeit: ${formattedTime}`;
+}
+
+// Timer jede Sekunde aktualisieren
+setInterval(updateTimer, 1000);
