@@ -3,11 +3,18 @@ body {
     background-color: #f4f4f9; /* Heller Hintergrund für bessere Lesbarkeit */
     color: #333; /* Dunkle Schriftfarbe für besseren Kontrast */
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     min-height: 100vh;
     margin: 0;
+    text-align: center;
+}
+
+#timer {
+    font-size: 3rem; /* Große Schriftgröße für den Timer */
+    font-weight: bold;
+    margin: 20px;
+    color: #007bff; /* Blaue Farbe für den Timer */
 }
 
 h1 {
