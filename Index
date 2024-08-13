@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room Rätsel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Escape Room Rätsel</h1>
+    <div class="container">
+        <!-- Rätsel 1 bis 10 -->
+        <div class="riddle" id="riddle1">
+            <label for="input1">Rätsel 1:</label>
+            <input type="text" id="input1">
+            <button onclick="checkCode('input1', 'riddle1', 'code1')">Überprüfen</button>
+        </div>
+        <div class="riddle" id="riddle2">
+            <label for="input2">Rätsel 2:</label>
+            <input type="text" id="input2">
+            <button onclick="checkCode('input2', 'riddle2', 'code2')">Überprüfen</button>
+        </div>
+        <!-- Wiederhole den obigen Block für alle 10 Rätsel -->
+        <!-- ... -->
+        <div class="riddle" id="riddle10">
+            <label for="input10">Rätsel 10:</label>
+            <input type="text" id="input10">
+            <button onclick="checkCode('input10', 'riddle10', 'code10')">Überprüfen</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
