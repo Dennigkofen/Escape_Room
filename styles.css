@@ -92,3 +92,12 @@ h1 {
     background-color: #28a745; /* Grüner Hintergrund für gelöste Rätsel */
     cursor: default; /* Mauszeiger zeigt keine Interaktivität an */
 }
+
+.riddle.incorrect input {
+    border-color: #dc3545; /* Roter Rand für falsche Eingaben */
+    background-color: #f8d7da; /* Hellrote Hintergrundfarbe */
+}
+
+.riddle.incorrect label {
+    color: #dc3545; /* Rote Schriftfarbe für den Label */
+}
