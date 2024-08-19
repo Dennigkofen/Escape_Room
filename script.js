@@ -1,15 +1,15 @@
 // Beispielcodes für die 10 Rätsel
 const codes = {
-    code1: '1234',
-    code2: '5678',
-    code3: '91011',
-    code4: '1213',
-    code5: '1415',
-    code6: '1617',
-    code7: '1819',
-    code8: '2021',
-    code9: '2223',
-    code10: '2425'
+    code1: '50328',
+    code2: '38129',
+    code3: '93638',
+    code4: '84810',
+    code5: '21468',
+    code6: '32460',
+    code7: '29357',
+    code8: '73625',
+    code9: '42138',
+    code10: '09863'
 };
 
 const inputs = [
